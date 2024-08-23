@@ -1,13 +1,12 @@
 <?php
-global $author;
-include __DIR__ . '/layout/head.php';
-    include __DIR__ . '/layout/header.php';
-    include __DIR__ . '/layout/menu.php';
+    include './views/layout/head.php';
+    include './views/layout/header.php';
+    include './views/layout/menu.php';
 ?>
 
 
     <section class="content">
-        <h1>Welkom <?= $author; ?></h1>
+        <h1>Welkom</h1>
         <p>Ik, Stephan Hoeksema, ben een toegewijde professional binnen de IT-sector met een sterke focus op
             softwareontwikkeling en onderwijs. Met een achtergrond in informatica en jarenlange ervaring in het veld,
             heb ik een reputatie opgebouwd als een deskundige en gepassioneerde ontwikkelaar en docent.</p>
@@ -26,6 +25,6 @@ include __DIR__ . '/layout/head.php';
 
 
 <?php
-    include __DIR__ . '/layout/event.php';
-    include __DIR__ . '/layout/footer.php';
+    include './views/layout/event.php';
+    include './views/layout/footer.php';
 ?>

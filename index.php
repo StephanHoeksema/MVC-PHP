@@ -18,7 +18,6 @@ if($method === 'GET') {
     if ($request == '/') {
         require __DIR__ . '/views/index.view.php';
     }
-
 } elseif ($method === 'POST') {
     // afhandelen post request
     die(var_dump('post'));
