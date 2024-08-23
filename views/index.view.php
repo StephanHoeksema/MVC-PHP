@@ -6,7 +6,7 @@
 
 
     <section class="content">
-        <h1>Welkom</h1>
+        <h1>Welkom <?= $method; ?></h1>
         <p>Ik, Stephan Hoeksema, ben een toegewijde professional binnen de IT-sector met een sterke focus op
             softwareontwikkeling en onderwijs. Met een achtergrond in informatica en jarenlange ervaring in het veld,
             heb ik een reputatie opgebouwd als een deskundige en gepassioneerde ontwikkelaar en docent.</p>
