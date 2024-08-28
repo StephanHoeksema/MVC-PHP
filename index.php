@@ -1,39 +1,33 @@
 
 
 <?php
-try {
-    $pdo = new PDO('mysql:host=localhost;dbname=profilepage','root', 'Pl0ns!976');
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//    echo "Connected successfully";
-} catch (PDOException $e) {
-    echo "ceonnection failed: " . $e->getMessage();
-}
+require 'Connection.php';
 
-$stmt = $pdo->prepare("SELECT * FROM users");
-$stmt->execute();
+$pdo = new Connection();
 
-$users = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-$users = $stmt->fetchAll();
-//die(var_dump($users));
+
+
+$users = $pdo->query();
+
 foreach ($users as $user) {
     echo $user['username'] . "<br>";
 }
-
-// Inlezen van het JSON-bestand
-$jsonData = file_get_contents('profiles.json');
-
-// Omzetten van JSON naar een PHP-array
-$data = json_decode($jsonData, true);
-
-// Gebruik maken van de gegevens
-echo "Naam: " . $data['name'] . "<br>";
-echo "Leeftijd: " . $data['age'] . "<br>";
-echo "Email: " . $data['email'] . "<br>";
-echo "Modules: <br>";
-foreach ($data['modules'] as $module) {
-    echo "&nbsp; " . $module . "<br>";
-}
-
+//
+//// Inlezen van het JSON-bestand
+//$jsonData = file_get_contents('profiles.json');
+//
+//// Omzetten van JSON naar een PHP-array
+//$data = json_decode($jsonData, true);
+//
+//// Gebruik maken van de gegevens
+//echo "Naam: " . $data['name'] . "<br>";
+//echo "Leeftijd: " . $data['age'] . "<br>";
+//echo "Email: " . $data['email'] . "<br>";
+//echo "Modules: <br>";
+//foreach ($data['modules'] as $module) {
+//    echo "&nbsp; " . $module . "<br>";
+//}
+//
 
 
 
