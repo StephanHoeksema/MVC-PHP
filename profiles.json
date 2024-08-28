@@ -1,0 +1,7 @@
+{
+  "name": "Stephan Hoeksema",
+  "age": 48,
+  "email": "s.hoeksema@windesheim.nl",
+  "password": "drowssap",
+  "modules": ["php", "mysql"]
+}
